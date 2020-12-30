@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNumberActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/top_nav_bar"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@drawable/custom_top_navigation_bar">
+
+    <TextView
+        android:id="@+id/addNumber_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/addNumber_lets_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's Get Started!!!"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/top_nav_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/addNumber_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/addNumber_lets_start"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Enter mobile number"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/editTextNumber"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/custom_rounded_white_border"
+        android:paddingStart="15dp"
+        android:layout_marginTop="5dp"
+        android:paddingTop="12dp"
+        android:textColor="@color/black"
+        android:text="+91"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNumber_tv" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:inputType="phone"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="20dp"
+        android:paddingStart="30dp"
+        android:textSize="15sp"
+        android:background="@drawable/custom_rounded_white_border"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@id/addNumber_tv" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Continue"
+        android:textStyle="bold"
+        android:background="@drawable/custom_rounded_pink_background"
+        android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        android:padding="5dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
