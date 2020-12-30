@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/pink_light"
+    android:background="@color/pink_dark"
     tools:context=".SplashScreenActivity">
 
     <ImageView
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/grocery_app_icon"/>
+        android:src="@drawable/app_logo"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,8 +23,8 @@
         android:text="Food Pantry"
         android:textStyle="bold"
         android:fontFamily="cursive"
-        android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_logo" />
