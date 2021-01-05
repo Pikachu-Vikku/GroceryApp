@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.GroceryApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.GroceryApp" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/pink_light</item>
+        <item name="colorPrimary">@color/pink_dark</item>
         <item name="colorPrimaryVariant">@color/pink_dark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
