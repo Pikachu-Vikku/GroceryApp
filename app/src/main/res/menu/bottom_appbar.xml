@@ -14,7 +14,10 @@
         app:showAsAction="always"
         android:iconTint="@color/white"/>
     <item
-        android:title=""/>
+        android:id="@+id/notAvailable"
+        android:title=""
+        android:checkable="false"
+        android:enabled="false"/>
     <item
         android:id="@+id/bottom_appbar_profilr"
         android:title="Profile"

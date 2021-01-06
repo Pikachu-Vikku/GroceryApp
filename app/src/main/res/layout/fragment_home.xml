@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_page_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/custom_top_navigation_bar">
+
+        <TextView
+            android:id="@+id/home_page_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Pantry"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            app:layout_constraintTop_toTopOf="@id/home_page_nav_bar"
+            app:layout_constraintLeft_toLeftOf="@id/home_page_nav_bar"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="3dp"
+            android:elevation="20dp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/home_page_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/custom_background_search_view"
+            app:layout_constraintRight_toRightOf="@id/home_page_nav_bar"
+            app:layout_constraintLeft_toLeftOf="@id/home_page_nav_bar"
+            app:layout_constraintTop_toBottomOf="@id/home_page_app_name"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="8dp"
+            app:queryHint="Search Groceries"
+            app:iconifiedByDefault="false"
+            android:textAlignment="center"
+            android:elevation="25dp"/>
+
+        <ImageView
+            android:id="@+id/home_page_cart_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/ic_cart_v_icon"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:tint="@color/white"
+            android:elevation="50dp"
+            android:focusable="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/home_page_categories_icons_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintLeft_toLeftOf="@id/home_page_nav_bar"
+        app:layout_constraintTop_toBottomOf="@id/home_page_nav_bar"
+        app:layout_constraintBottom_toBottomOf="@id/home_page_nav_bar"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="@id/home_page_nav_bar"
+
+        app:elevation="50dp">
+
+        <ImageButton
+            android:id="@+id/home_page_fruit_icon"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_fruit_icon"
+            android:background="@drawable/custom_rouded_white_background"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"/>
+
+        <ImageButton
+            android:id="@+id/home_page_vegi_icon"
+            android:layout_width="1dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_vegitables_icon"
+            android:background="@drawable/custom_rouded_white_background"
+            android:layout_marginStart="10dp"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:layout_marginTop="5dp"/>
+
+        <ImageButton
+            android:id="@+id/home_page_grocery_icon"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_grocery_icon"
+            android:background="@drawable/custom_rouded_white_background"
+            android:layout_marginStart="10dp"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:layout_marginTop="5dp"/>
+
+        <ImageButton
+            android:id="@+id/home_page_snack_icon"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_snacks_icon"
+            android:background="@drawable/custom_rouded_white_background"
+            android:layout_marginStart="10dp"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/home_page_carouselview"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:layout_constraintTop_toBottomOf="@id/home_page_categories_icons_linear_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
